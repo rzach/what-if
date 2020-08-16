@@ -1,6 +1,6 @@
 # What If?
 
-![Book Cover](https://openlogicproject.org/courses/what-if/wi.png)
+![Book Cover](https://builds.openlogicproject.org/courses/what-if/wi.png)
 
 A textbook on non-classical logics based on the Open
 Logic Project. Work in progress!
