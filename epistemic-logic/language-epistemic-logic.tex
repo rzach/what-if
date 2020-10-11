@@ -67,7 +67,20 @@ If !!a{formula}~$!A$ does not contain $\Knows_a$, we say it
 is \emph{modal-free}.
 
 \begin{defn}
-  While the $\Knows$ operator is intended to symbolize individual knowledge, $\EKnows$, often read as ``everybody knows,'' symbolizes group knowledge. Where $B \subseteq A$, we define $$\EKnows_B !A :=  \bigwedge_{b \in B} \Knows_b !A.$$
+  While the $\Knows$ operator is intended to symbolize individual
+  knowledge, $\EKnows$, often read as ``everybody knows,'' symbolizes
+  group knowledge. Where $B \subseteq A$, we define $\EKnows_B !A$
+ as an abbreviation for \[\bigwedge_{b \in B} \Knows_b !A.\]
 \end{defn}
+
+We can also define an even stronger sense of knowledge, namely
+\emph{common knowledge} among a group of agents~$B$. When a piece of
+information is common knowledge among a group of agents, it means that
+for every combination of agents in that group, they all know that each
+other knows that each other knows \dots ad infinitum. This is
+significantly stronger than group knowledge, and it is easy to come up
+with relational models in which !!a{formula} is group knowledge, but
+not common knowledge. We will use $\CKnows_B !A$ to symbolize ``it is
+common knowledge among~$B$ that~$!A$.''
 
 \end{document}

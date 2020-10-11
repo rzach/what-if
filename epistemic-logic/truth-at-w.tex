@@ -91,4 +91,22 @@ other semantic concepts from normal modal logic, such as modal
 validity and entailment, simply carry over, applied to this new way of
 thinking about the interpretation for the modal operators.
 
+We are now also in a position to give truth conditions for the common
+knowledge operator~$\CKnows_B$. Recall from \olref[sfr][rel][ops]{sec}
+that the \emph{transitive closure}~$R^+$ of a relation~$R$ is defined
+as
+\begin{align*}
+  R^+ &= \bigcup_{ n \in \mathbb{N}} R^n, 
+\intertext{where}
+ R^0 & = R \text{ and}\\ 
+R^{n+1} & = \Setabs{\tuple{x, z}}{\exists y (R^n xy \land Ryz)}.
+\end{align*}
+Then, where $B$ is a group of agents, we define $R_B = ( \bigcup_{b
+\in B} R_b )^+$ to be the transitive closure of the union of all
+agents' accessibility relations.
+
+\begin{defn}
+If $B \subseteq A$, we let $\mSat{M}{\CKnows_B !A}[ w]$ iff for every $w'$ such that $R_B w w'$, $\mSat{M}{!A}[w']$.
+\end{defn}
+
 \end{document}
