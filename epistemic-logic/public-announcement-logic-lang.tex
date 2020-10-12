@@ -30,7 +30,7 @@ public announcements contains
   \iftag{prvOr}{\ycomma $\lor$ (disjunction)}{}%
   \iftag{prvIf}{\ycomma $\lif$ (!!{conditional})}{}%
   \item The knowledge operator $\Knows_a$ where $a \in A$.
-  \item The public announcement operator $[!!B]$ where $!!B$ is a !!{formula}.
+  \item The public announcement operator $[!B]$ where $!B$ is a !!{formula}.
 \end{enumerate}
 \end{defn}
 
@@ -64,13 +64,14 @@ The public announcement operator functions as a box operator, and our inductive 
 \item If $!A$ is !!a{formula} and $a \in A$, then $\Knows_a !A$ is
   !!a{formula}.
   
-\item If $!A$ and $!B$ are !!{formula}s, then $[!A] !B$ is !!a{formula}
+\item If $!A$ and $!B$ are !!{formula}s, then $[!A] !B$ is !!a{formula}.
 
 \tagitem{limitClause}{Nothing else is a !!{formula}.}{}
 \end{enumerate}
 \end{defn}
 
-It will sometimes also be useful to talk about common knowledge in the context
+The intended reading of the !!{formula} $[!A] !B$ is ``After $!A$ is truthfully announced,
+$B$ holds. It will sometimes also be useful to talk about common knowledge in the context
 of public announcements, so the language may also include the common knowledge
 operator $\CKnows_B !A$.
 
