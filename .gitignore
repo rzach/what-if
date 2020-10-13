@@ -136,3 +136,4 @@ sympy-plots-for-*.tex/
 # html etc. files
 *.html
 *.css
+pdfa.xmpi
