@@ -19,8 +19,8 @@ all of the agents witness this taking place together. To do this, we
 expand the language as follows
 
 \begin{defn}
-Let $A$ be a set of agent-symbols. The basic language of multi-agent
-epistemic logic with public announcements contains
+Let $G$ be a set of agent-symbols. The basic language of multi-agent epistemic logic with 
+public announcements contains
 \begin{enumerate}
   \tagitem{prvFalse}{The propositional constant for !!{falsity}~$\lfalse$.}{}
   \tagitem{prvTrue}{The propositional constant for !!{truth}~$\ltrue$.}{}
@@ -31,7 +31,7 @@ epistemic logic with public announcements contains
   \iftag{prvAnd}{\ycomma $\land$ (conjunction)}{}%
   \iftag{prvOr}{\ycomma $\lor$ (disjunction)}{}%
   \iftag{prvIf}{\ycomma $\lif$ (!!{conditional})}{}%
-  \item The knowledge operator $\Knows_a$ where $a \in A$.
+  \item The knowledge operator $\Knows_a$ where $a \in G$.
   \item The public announcement operator $[!B]$ where $!B$ is a !!{formula}.
 \end{enumerate}
 \end{defn}
@@ -64,7 +64,7 @@ inductive definition of the language is given accordingly:
 \tagitem{prvIff}{If $!A$ and $!B$ are !!{formula}s, then $(!A \liff !B)$
   is !!a{formula}.}{}
 
-\item If $!A$ is !!a{formula} and $a \in A$, then $\Knows_a !A$ is
+\item If $!A$ is !!a{formula} and $a \in G$, then $\Knows_a !A$ is
   !!a{formula}.
   
 \item If $!A$ and $!B$ are !!{formula}s, then $[!A] !B$ is !!a{formula}.
@@ -73,10 +73,9 @@ inductive definition of the language is given accordingly:
 \end{enumerate}
 \end{defn}
 
-The intended reading of the !!{formula} $[!A] !B$ is ``After $!A$ is
-truthfully announced, $!B$~holds. It will sometimes also be useful to
-talk about common knowledge in the context of public announcements, so
-the language may also include the common knowledge operator~$\CKnows_B
-!A$.
+The intended reading of the !!{formula} $[!A] !B$ is ``After $!A$ is truthfully announced,
+$!B$~holds. It will sometimes also be useful to talk about common knowledge in the context
+of public announcements, so the language may also include the common knowledge
+operator~$\CKnows_G !A$.
 
 \end{document}

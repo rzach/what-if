@@ -105,20 +105,20 @@ More formally, we have $\mSat{M}{\lnot \Knows_b p}[w_1]$ but $\mSat{M
 \mid p}{\Knows_b p}[w'_1]$. This implies that $\mSat{M}{[p] \Knows_b
 p}[w_1]$. But we have some even stronger claims that we can make about
 the result of the announcement. In fact, it is the case that
-$mSat{M}{[p]\CKnows_{a,b} p}[w_1]$. In other words, after $p$ is
+$\mSat{M}{[p]\CKnows_{\{a,b\}} p}[w_1]$. In other words, after $p$ is
 announced, it becomes \emph{common knowledge}.
 
 We might wonder, though, whether this holds in the general case, and
-whether a truthful announcement of $!A$ will \emph{always} result in
+whether a truthful announcement of~$!A$ will \emph{always} result in
 $!A$ becoming common knowledge. It may be surprising that the answer
-is in fact no. And in fact, it is possible to truthfully announce
-formulas that will no longer be true once they are announced. For
+is no. And in fact, it is possible to truthfully announce
+!!{formula}s that will no longer be true once they are announced. For
 example, consider the effects of announcing $p \land \lnot \Knows_b p$
-at $w_1$ in \olref{fig:announcement-example}. In fact, $\mModel M \mid
+at~$w_1$ in \olref{fig:announcement-example}. In fact, $\mModel M \mid
 p$ and $\mModel M \mid (p \land \lnot \Knows_b p)$ are the same model.
 However, as we have already noted, $\mSat{M \mid p}{\Knows_b
 p}[w'_1]$. Therefore, $\mSat{M \mid (p \land \lnot \Knows_b p)}{\lnot
-(p \land \lnot \Knows_b p)}[w'_1]$, so this is a formula that becomes
+(p \land \lnot \Knows_b p)}[w'_1]$, so this is !!a{formula} that becomes
 false once it has been announced. 
 
 \end{document}
