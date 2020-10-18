@@ -84,7 +84,7 @@ which points in it. We use the same notation ``model $\mModel{M}$ makes
 !!{formula}~$!A$ true at point~$t$'' for the basic notion of relational
 semantics. The relation is defined inductively and is identical to the normal modal case for all non-modal operators.
 
-\begin{defn}\ollabel{defn:mmodels}
+\begin{defn}\ollabel{defn:tmodels}
   \emph{Truth of !!a{formula}~$!A$ at~$t$} in a~$\mModel M$, in symbols:
   $\mSat{M}{!A}[t]$, is defined inductively as follows:
   \begin{enumerate}
@@ -111,7 +111,7 @@ semantics. The relation is defined inductively and is identical to the normal mo
    \item\ollabel{defn:sub:mmodels-f}
     \indcase{!A}{F !B}{$\mSat{M}{\indfrm}[t]$ iff
     $\mSat{M}{!B}[t']$ for some $t' \in T$ with $t \prec t'$}
-\item\ollabel{defn:sub:mmodels-h}
+\item\ollabel{defn:sub:mmodels-g}
     \indcase{!A}{G !B}{$\mSat{M}{\indfrm}[t]$ iff
     $\mSat{M}{!B}[t']$ for every $t' \in T$ with $t \prec t'$}
   \end{enumerate} 
