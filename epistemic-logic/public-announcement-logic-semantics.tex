@@ -10,11 +10,12 @@
 
 \olsection{Semantics of Public Announcement Logic}
 
-Relational models for public announcement logics are the same as they were in epistemic logics. However,
-the semantics for the public announcement operator are something new.
+Relational models for public announcement logics are the same as they
+were in epistemic logics. However, the semantics for the public
+announcement operator are something new.
 
-\begin{defn}\ollabel{defn:mmodels}
-  \emph{Truth of !!a{formula}~$!A$ at~$w$} in a~$\mModel M = \langle W, R, V \rangle$, in symbols:
+\begin{defn}\ollabel{defn:mmodels} \emph{Truth of !!a{formula}~$!A$
+  at~$w$} in a~$\mModel M = \langle W, R, V \rangle$, in symbols:
   $\mSat{M}{!A}[w]$, is defined inductively as follows:
   \begin{enumerate}
   \tagitem{prvFalse}{\indcase{!A}{\lfalse}{Never $\mSat{M}{\lfalse}[w]$}.}{}
@@ -39,27 +40,30 @@ the semantics for the public announcement operator are something new.
     $\mSat{M}{!B}[w]$ implies $\mSat{M \mid !B}{!C}[w]$}
 
   
-  Where $M \mid !B = \langle W', R', V' \rangle$ is defined as follows:
-  
+  Where $\mModel M \mid !B = \langle W', R', V' \rangle$ is defined as follows:
   \begin{enumerate}
-  \item $W' = \{ u \in W \mid \mSat{M}{!B}[u] \}$. 
-  So the worlds of $M \mid !B$ are the worlds in $M$ at which $!B$ holds.
-  \item $R'_a = R_a \cap (W' \times W')$.
-  Each agent's accessibility relation is simply restricted to the worlds that remain in $W'$.
-  \item $V'(p) = \{ u \in W' \mid u \in V(p) \}$.
-  Similarly, the propositional valuations at worlds remain the same, representing the idea that informational events
-  will not change the truth value of propositional variables.
+  \item $W' = \Setabs{ u \in W}{\mSat{M}{!B}[u]}$. So the worlds of
+  $\mModel M \mid !B$ are the worlds in~$\mModel M$ at which $!B$
+  holds.
+  \item $R'_a = R_a \cap (W' \times W')$. Each agent's accessibility
+  relation is simply restricted to the worlds that remain in~$W'$.
+  \item $V'(p) = \Setabs{ u \in W'}{u \in V(p) }$. Similarly, the
+  propositional valuations at worlds remain the same, representing the
+  idea that informational events will not change the truth value of
+  propositional variables.
   \end{enumerate}
   
   \end{enumerate} 
 \end{defn}
 
-What is distinctive, then, about public announcement logics, is that the truth of !!a{formula} at $M$
-can sometimes only be decided by referring to a model other than $M$ itself.
+What is distinctive, then, about public announcement logics, is that
+the truth of !!a{formula} at~$\mModel M$ can sometimes only be decided
+by referring to a model other than~$\mModel M$ itself.
 
-Notice also that our semantics treats the announcement operator as a $\Box$ operator, and so
-if !!a{formula} $!A$ cannot be truthfully announced at a world, then $[!A]B$ will hold there trivially,
-just as all $\Box$ !!{formula}s hold at endpoints. 
+Notice also that our semantics treats the announcement operator as a
+$\Box$~operator, and so if !!a{formula}~$!A$ cannot be truthfully
+announced at a world, then $[!A]B$ will hold there trivially, just as
+all $\Box$ !!{formula}s hold at endpoints. 
 
 \begin{figure}
   \begin{center}
@@ -79,8 +83,8 @@ just as all $\Box$ !!{formula}s hold at endpoints.
       \draw[->,loop below] (v1) to node {$a,b$} (v1);
       \draw[->,loop above] (v3) to node {$a,b$} (v3) ;
       
-      \node(m)[below=of w1]{$M$};
-      \node(m')[below=of v1]{$M \mid p$}; 
+      \node(m)[below=of w1]{$\mModel M$};
+      \node(m')[below=of v1]{$\mModel M \mid p$}; 
 
       \draw[-,dotted] (w1) to node {\footnotesize announcement of $p$}(v1) ;
      
@@ -90,26 +94,31 @@ just as all $\Box$ !!{formula}s hold at endpoints.
   \ollabel{fig:announcement-example}
 \end{figure}
 
-We can see the public announcement of a !!{formula} as shrinking a model, or restricting
-it to the worlds at which the !!{formula} was true. \olref{fig:announcement-example} gives an
-example of the effects of publicly announcing $p$. One notable thing about that model is that
-agent $b$ learns that $p$ as a result of the announcement, while agent $a$ does not (since $a$
-already knew that $p$ was true).
+We can see the public announcement of a !!{formula} as shrinking a
+model, or restricting it to the worlds at which the !!{formula} was
+true. \olref{fig:announcement-example} gives an example of the effects
+of publicly announcing~$p$. One notable thing about that model is that
+agent~$b$ learns that~$p$ as a result of the announcement, while
+agent~$a$ does not (since $a$ already knew that~$p$ was true).
 
-More formally, we have $\mSat{M}{\lnot \Knows_b p}[w_1]$ but $\mSat{M \mid p}{\Knows_b p}[w'_1]$. 
-This implies that $\mSat{M}{[p] \Knows_b p}[w_1]$. But we have some even stronger claims that we 
-can make about the result of the announcement. In fact, it is the case that $\mSat{M}{[p]\CKnows_{\{a,b\}} p}[w_1]$.
-In other words, after $p$ is announced, it becomes \emph{common knowledge}.
+More formally, we have $\mSat{M}{\lnot \Knows_b p}[w_1]$ but $\mSat{M
+\mid p}{\Knows_b p}[w'_1]$. This implies that $\mSat{M}{[p] \Knows_b
+p}[w_1]$. But we have some even stronger claims that we can make about
+the result of the announcement. In fact, it is the case that
+$\mSat{M}{[p]\CKnows_{\{a,b\}} p}[w_1]$. In other words, after $p$ is
+announced, it becomes \emph{common knowledge}.
 
-We might wonder, though, whether this holds in the general case, and whether a truthful
-announcement of $!A$ will \emph{always} result in $!A$ becoming common knowledge. It may
-be surprising that the answer is in fact no. And in fact, it is possible to truthfully announce formulas that will
-no longer be true once they are announced. For example, consider the effects of announcing 
-$p \land \lnot \Knows_b p$ at $w_1$ in \olref{fig:announcement-example}. In fact, $M \mid p$ and
-$M \mid (p \land \lnot \Knows_b p)$ are the same model. However, as we have already noted, 
-$\mSat{M \mid p}{\Knows_b p}[w'_1]$. Therefore,
- $\mSat{M \mid (p \land \lnot \Knows_b p)}{\lnot (p \land \lnot \Knows_b p)}[w'_1]$, so this is a formula
- that becomes false once it has been announced. 
-
+We might wonder, though, whether this holds in the general case, and
+whether a truthful announcement of~$!A$ will \emph{always} result in
+$!A$ becoming common knowledge. It may be surprising that the answer
+is no. And in fact, it is possible to truthfully announce
+!!{formula}s that will no longer be true once they are announced. For
+example, consider the effects of announcing $p \land \lnot \Knows_b p$
+at~$w_1$ in \olref{fig:announcement-example}. In fact, $\mModel M \mid
+p$ and $\mModel M \mid (p \land \lnot \Knows_b p)$ are the same model.
+However, as we have already noted, $\mSat{M \mid p}{\Knows_b
+p}[w'_1]$. Therefore, $\mSat{M \mid (p \land \lnot \Knows_b p)}{\lnot
+(p \land \lnot \Knows_b p)}[w'_1]$, so this is !!a{formula} that becomes
+false once it has been announced. 
 
 \end{document}
