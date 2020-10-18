@@ -23,8 +23,8 @@ The basic language of temporal logic contains
   \iftag{prvOr}{\ycomma $\lor$ (disjunction)}{}%
   \iftag{prvIf}{\ycomma $\lif$ (!!{conditional})}{}%
   \iftag{prvIff}{\ycomma $\liff$ (!!{biconditional})}{}.
-  \item Past operators $P$ and $H$.
-  \item Future operators $F$ and $G$.
+  \item Past operators $\Ptemp$ and $\Htemp$.
+  \item Future operators $\Ftemp$ and $\Gtemp$.
 \end{enumerate}
 \end{defn}
 
@@ -55,7 +55,7 @@ Later on, we will discuss the potential addition of other kinds of modal operato
 \tagitem{prvIff}{If $!A$ and $!B$ are !!{formula}s, then $(!A \liff !B)$
   is !!a{formula}.}{}
 
-\item If $!A$ is !!a{formula}, then $P !A$, $H !A$, $F !A$, $G !A$ are all
+\item If $!A$ is !!a{formula}, then $\Ptemp  !A$, $\Htemp  !A$, $F !A$, $\Gtemp  !A$ are all
   !!{formula}s.
 
 \tagitem{limitClause}{Nothing else is a !!{formula}.}{}
@@ -86,7 +86,7 @@ point~$t$'' for the basic notion of relational semantics. The relation
 is defined inductively and is identical to the normal modal case for
 all non-modal operators.
 
-\begin{defn}\ollabel{defn:mmodels}
+\begin{defn}\ollabel{defn:tmodels}
   \emph{Truth of !!a{formula}~$!A$ at~$t$} in a~$\mModel M$, in symbols:
   $\mSat{M}{!A}[t]$, is defined inductively as follows:
   \begin{enumerate}
@@ -105,21 +105,21 @@ all non-modal operators.
     either both $\mSat{M}{!B}[t]$ and $\mSat{M}{!C}[t]$ or
     neither $\mSat{M}{!B}[t]$ nor $\mSat{M}{!C}[t]$}.}{}
   \item\ollabel{defn:sub:mmodels-p}
-    \indcase{!A}{P !B}{$\mSat{M}{\indfrm}[t]$ iff
+    \indcase{!A}{\Ptemp  !B}{$\mSat{M}{\indfrm}[t]$ iff
     $\mSat{M}{!B}[t']$ for some $t' \in T$ with $t' \prec t$}
 \item\ollabel{defn:sub:mmodels-h}
-    \indcase{!A}{H !B}{$\mSat{M}{\indfrm}[t]$ iff
+    \indcase{!A}{\Htemp  !B}{$\mSat{M}{\indfrm}[t]$ iff
     $\mSat{M}{!B}[t']$ for every $t' \in T$ with $t' \prec t$}
    \item\ollabel{defn:sub:mmodels-f}
-    \indcase{!A}{F !B}{$\mSat{M}{\indfrm}[t]$ iff
+    \indcase{!A}{\Ftemp  !B}{$\mSat{M}{\indfrm}[t]$ iff
     $\mSat{M}{!B}[t']$ for some $t' \in T$ with $t \prec t'$}
 \item\ollabel{defn:sub:mmodels-g}
-    \indcase{!A}{G !B}{$\mSat{M}{\indfrm}[t]$ iff
+    \indcase{!A}{\Gtemp  !B}{$\mSat{M}{\indfrm}[t]$ iff
     $\mSat{M}{!B}[t']$ for every $t' \in T$ with $t \prec t'$}
   \end{enumerate} 
 \end{defn}
 
-Based on the semantics, you might be able to see that the operators $P$ and $H$ are duals, as well as the
-operators $F$ and $G$, such that we could define $H !A$ as $\lnot P \lnot !A$, and the same with $G$ and $F$.
+Based on the semantics, you might be able to see that the operators $\Ptemp$ and~$\Htemp$ are duals, as well as the
+operators $\Ftemp$ and $\Gtemp$, such that we could define $\Htemp  !A$ as $\lnot \Ptemp \lnot !A$, and the same with $\Gtemp$ and~$\Ftemp$.
 
 \end{document}
