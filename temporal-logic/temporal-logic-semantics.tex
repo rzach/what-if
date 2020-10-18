@@ -79,12 +79,14 @@ The semantics of temporal logics are given in terms of relational models, as wit
 
 For now, you will notice that we do not impose any conditions on our precedence relation $\prec$. This means that at present, there are no restrictions on the structure of our temporal models, so we could have models in which time is linear, branching, circular, or has any structure whatsoever. 
 
-Just as with normal modal logic, every temporal model determines which !!{formula}s count as true at
-which points in it. We use the same notation ``model $\mModel{M}$ makes
-!!{formula}~$!A$ true at point~$t$'' for the basic notion of relational
-semantics. The relation is defined inductively and is identical to the normal modal case for all non-modal operators.
+Just as with normal modal logic, every temporal model determines which
+!!{formula}s count as true at which points in it. We use the same
+notation ``model $\mModel{M}$ makes !!{formula}~$!A$ true at
+point~$t$'' for the basic notion of relational semantics. The relation
+is defined inductively and is identical to the normal modal case for
+all non-modal operators.
 
-\begin{defn}\ollabel{defn:tmodels}
+\begin{defn}\ollabel{defn:mmodels}
   \emph{Truth of !!a{formula}~$!A$ at~$t$} in a~$\mModel M$, in symbols:
   $\mSat{M}{!A}[t]$, is defined inductively as follows:
   \begin{enumerate}
