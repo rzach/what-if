@@ -27,24 +27,29 @@ will see, it will capture a sense of equivalence between models that
 can be captured in our epistemic language.
 
 \begin{defn}[Bisimulation]
-Let $M_1 = \langle W_1, R_1, V_1 \rangle$ and $M_2 = \langle W_2, R_2, V_2 \rangle$ be two relational models. And let $\mathcal{R} \subseteq W_1 \times W_2$ be a binary relation. We say that $\mathcal{R}$ is a \emph{bisimulation} when for every $\langle w_1, w_2 \rangle \in \mathcal{R}$, we have:
+Let $M_1 = \tuple{W_1, R_1, V_1}$ and $M_2 = \tuple{W_2, R_2, V_2}$ be
+two relational models. And let $\mathcal{R} \subseteq W_1 \times W_2$
+be a binary relation. We say that $\mathcal{R}$ is a
+\emph{bisimulation} when for every $\tuple{w_1, w_2} \in \mathcal{R}$,
+we have:
 
 \begin{enumerate}
-  \item {$w_1 \in V_1(p)$ iff $w_2 \in V_2(p)$ for all
-  !!{propositional variable}s~$p$.}{}
-  \item {For all agents $a \in A$ and worlds $v_1 \in W_1$, if
+  \item $w_1 \in V_1(p)$ iff $w_2 \in V_2(p)$ for all
+  !!{propositional variable}s~$p$.
+  \item For all agents $a \in A$ and worlds $v_1 \in W_1$, if
   $R_{1_a} w_1 v_1$ then there is some $v_2 \in W_2$ such that
-  $R_{2_a} w_2 v_2$, and $\langle v_1, v_2 \rangle \in
-  \mathcal{R}$.}{}
-  \item {For all agents $a \in A$ and worlds $v_2 \in W_2$, if
+  $R_{2_a} w_2 v_2$, and $\tuple{v_1, v_2} \in
+  \mathcal{R}$.
+  \item For all agents $a \in A$ and worlds $v_2 \in W_2$, if
    $R_{2_a} w_2 v_2$ then there is some $v_1 \in W_1$ such that
-   $R_{1_a} w_1 v_1$, and $\langle v_1, v_2 \rangle \in
-   \mathcal{R}$.}{}
+   $R_{1_a} w_1 v_1$, and $\tuple{v_1, v_2} \in
+   \mathcal{R}$.
 \end{enumerate}
 
 When there is a bisimulation between $M_1$ and $M_2$ that links worlds
-$w_1$ and $w_2$, we can also write $(M_1, w_1) \leftrightarroweq (M_2,
-w_2)$, and call $(M_1, w_1)$ and $(M_2, w_2)$ \emph{bisimilar}.
+$w_1$ and $w_2$, we can also write $\tuple{M_1, w_1} \leftrightarroweq
+\tuple{M_2, w_2}$, and call $\tuple{M_1, w_1}$ and $\tuple{M_2, w_2}$
+\emph{bisimilar}.
 \end{defn}
 
 The different clauses in the bisimulation relation ensure different
@@ -55,8 +60,9 @@ to as ``forth'' and ``back,'' respectively, ensure that the
 accessibility relations will have the same structure.
 
 \begin{thm}
-If $(M_1, w_1) \leftrightarroweq (M_2, w_2)$, then for every formula
-$A$, $M_1, w_1 \Vdash A$ iff $M_2, w_2 \Vdash A$.
+If $\tuple{M_1, w_1} \leftrightarroweq \tuple{M_2, w_2}$, then for
+every !!{formula}~$!A$, we have that $\mSat{M_1}{!A}[w_1]$ iff
+$\mSat{M_2}{!A}[w_2]$.
 \end{thm}
 
 \begin{figure}
@@ -88,8 +94,8 @@ $A$, $M_1, w_1 \Vdash A$ iff $M_2, w_2 \Vdash A$.
 
 Even though the two models pictured in \olref{fig:bisimilar} aren't
 quite the same as each other, there is a bisimulation linking worlds
-$w_1$ and $v_1$. This bisimulation will also link both $w_2$ and $w_3$
-to $v_2$, with the idea being that there is nothing expressible in our
+$w_1$ and~$v_1$. This bisimulation will also link both $w_2$ and $w_3$
+to~$v_2$, with the idea being that there is nothing expressible in our
 modal language that can really distinguish between them. The situation
 would be different if $w_2$ and~$w_3$ satisfied different
 !!{propositional variable}s, however. 

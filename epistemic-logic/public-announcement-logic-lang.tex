@@ -19,8 +19,8 @@ all of the agents witness this taking place together. To do this, we
 expand the language as follows
 
 \begin{defn}
-Let $G$ be a set of agent-symbols. The basic language of multi-agent epistemic logic with 
-public announcements contains
+Let $G$ be a set of agent-symbols. The basic language of multi-agent
+epistemic logic with public announcements contains
 \begin{enumerate}
   \tagitem{prvFalse}{The propositional constant for !!{falsity}~$\lfalse$.}{}
   \tagitem{prvTrue}{The propositional constant for !!{truth}~$\ltrue$.}{}
@@ -40,42 +40,44 @@ The public announcement operator functions as a box operator, and our
 inductive definition of the language is given accordingly:
 
 \begin{defn}
-\emph{!!^{formula}s} of the epistemic language are inductively
+  \emph{!!^{formula}s} of the epistemic language are inductively
   defined as follows:
-\begin{enumerate}
-\tagitem{prvFalse}{$\lfalse$ is an atomic !!{formula}.}{}
+  \begin{enumerate}
+  \tagitem{prvFalse}{$\lfalse$ is an atomic !!{formula}.}{}
 
-\tagitem{prvTrue}{$\ltrue$ is an atomic !!{formula}.}{}
+  \tagitem{prvTrue}{$\ltrue$ is an atomic !!{formula}.}{}
 
-\item Every propositional variable $\Obj p_i$ is an (atomic) !!{formula}.
+  \item Every propositional variable $\Obj p_i$ is an (atomic)
+  !!{formula}.
 
-\tagitem{prvNot}{If $!A$ is !!a{formula}, then $\lnot !A$ is
+  \tagitem{prvNot}{If $!A$ is !!a{formula}, then $\lnot !A$ is
   !!a{formula}.}{}
 
-\tagitem{prvAnd}{If $!A$ and $!B$ are !!{formula}s, then $(!A \land
+  \tagitem{prvAnd}{If $!A$ and $!B$ are !!{formula}s, then $(!A \land
   !B)$ is !!a{formula}.}{}
 
-\tagitem{prvOr}{If $!A$ and $!B$ are !!{formula}s, then $(!A \lor !B)$
+  \tagitem{prvOr}{If $!A$ and $!B$ are !!{formula}s, then $(!A \lor !B)$
   is !!a{formula}.}{}
 
-\tagitem{prvIf}{If $!A$ and $!B$ are !!{formula}s, then $(!A \lif !B)$
+  \tagitem{prvIf}{If $!A$ and $!B$ are !!{formula}s, then $(!A \lif !B)$
   is !!a{formula}.}{}
 
-\tagitem{prvIff}{If $!A$ and $!B$ are !!{formula}s, then $(!A \liff !B)$
+  \tagitem{prvIff}{If $!A$ and $!B$ are !!{formula}s, then $(!A \liff !B)$
   is !!a{formula}.}{}
 
-\item If $!A$ is !!a{formula} and $a \in G$, then $\Knows_a !A$ is
+  \item If $!A$ is !!a{formula} and $a \in G$, then $\Knows_a !A$ is
   !!a{formula}.
   
-\item If $!A$ and $!B$ are !!{formula}s, then $[!A] !B$ is !!a{formula}.
+  \item If $!A$ and $!B$ are !!{formula}s, then $[!A] !B$ is !!a{formula}.
 
-\tagitem{limitClause}{Nothing else is a !!{formula}.}{}
+  \tagitem{limitClause}{Nothing else is a !!{formula}.}{}
 \end{enumerate}
 \end{defn}
 
-The intended reading of the !!{formula} $[!A] !B$ is ``After $!A$ is truthfully announced,
-$!B$~holds. It will sometimes also be useful to talk about common knowledge in the context
-of public announcements, so the language may also include the common knowledge
-operator~$\CKnows_G !A$.
+The intended reading of the !!{formula} $[!A] !B$ is ``After $!A$ is
+truthfully announced, $!B$~holds. It will sometimes also be useful to
+talk about common knowledge in the context of public announcements, so
+the language may also include the common knowledge operator~$\CKnows_G
+!A$.
 
 \end{document}

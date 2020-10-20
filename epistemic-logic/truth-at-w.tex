@@ -76,7 +76,9 @@ relation to represent.
 \end{figure}
 
 \begin{prob}
-  Consider which of the following hold in \olref[aml][el][trw]{fig:simple}    \begin{enumerate}
+  Consider which of the following hold in
+  \olref[aml][el][trw]{fig:simple}:
+  \begin{enumerate}
     \item $\mSat{M}{\lnot q}[w_1]$;
     \item $\mSat{M}{\Knows_a \lnot q}[w_1]$;
     \item $\mSat{M}{\Knows_b \lnot q}[w_1]$;
@@ -98,15 +100,16 @@ as
 \begin{align*}
   R^+ &= \bigcup_{ n \in \mathbb{N}} R^n, 
 \intertext{where}
- R^0 & = R \text{ and}\\ 
-R^{n+1} & = \Setabs{\tuple{x, z}}{\exists y (R^n xy \land Ryz)}.
+  R^0 & = R \text{ and}\\ 
+  R^{n+1} & = \Setabs{\tuple{x, z}}{\exists y (R^n xy \land Ryz)}.
 \end{align*}
 Then, where $G$ is a group of agents, we define $R_G = ( \bigcup_{b
 \in G} R_b )^+$ to be the transitive closure of the union of all
 agents' accessibility relations.
 
 \begin{defn}
-If $G' \subseteq G$, we let $\mSat{M}{\CKnows_{G'} !A}[ w]$ iff for every $w'$ such that $R_{G'} w w'$, $\mSat{M}{!A}[w']$.
+If $G' \subseteq G$, we let $\mSat{M}{\CKnows_{G'} !A}[ w]$ iff for
+every $w'$ such that $R_{G'} w w'$, $\mSat{M}{!A}[w']$.
 \end{defn}
 
 \end{document}
