@@ -92,16 +92,16 @@ all non-modal operators.
   \begin{enumerate}
   \tagitem{prvFalse}{\indcase{!A}{\lfalse}{Never $\mSat{M}{\lfalse}[t]$}.}{}
   \tagitem{prvTrue}{\indcase{!A}{\ltrue}{Always $\mSat{M}{\ltrue}[t]$}.}{}
-  \item $\mSat{M}{p}[t]$ iff $w \in V(p)$
+  \item $\mSat{M}{p}[t]$ iff $t \in V(p)$
   \tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\mSat{M}{\indfrm}[t]$ iff
     $\mSat/{M}{!B}[t]$}.}{}
   \tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}{$\mSat{M}{\indfrm}[t]$ iff
     $\mSat{M}{!B}[t]$ and $\mSat{M}{!C}[t]$}.}{}
   \tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}{$\mSat{M}{\indfrm}[t]$ iff
     $\mSat{M}{!B}[t]$ or $\mSat{M}{!C}[t]$} (or both).}{}
-  \tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}{$\mSat{M}{\indfrm}[w]$ iff
+  \tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}{$\mSat{M}{\indfrm}[t]$ iff
     $\mSat/{M}{!B}[t]$ or $\mSat{M}{!C}[t]$}.}{}
-  \tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}{$\mSat{M}{\indfrm}[w]$ iff
+  \tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}{$\mSat{M}{\indfrm}[t]$ iff
     either both $\mSat{M}{!B}[t]$ and $\mSat{M}{!C}[t]$ or
     neither $\mSat{M}{!B}[t]$ nor $\mSat{M}{!C}[t]$}.}{}
   \item\ollabel{defn:sub:mmodels-p}
